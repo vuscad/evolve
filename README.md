@@ -1,3 +1,4 @@
-./gradlew clean build
-docker-compose up --build -d
+# Run:
+# ./gradlew clean build
+# docker-compose up --build -d
 # evolve
