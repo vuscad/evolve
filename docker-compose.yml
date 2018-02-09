@@ -9,7 +9,7 @@ services:
       - MONGODB_USERNAME=test
       - MONGODB_PASSWORD=test
       - MONGODB_DATABASE=test
-  spring-boot-microservices-docker:
+  evolve:
     build:
       context: .
       dockerfile: ./src/main/docker/Dockerfile
@@ -28,4 +28,4 @@ services:
       - mongo
     ports:
       - "5005:5005"
-      - "8080:8080"
+      - "8070:8070"

@@ -17,6 +17,9 @@ import reactor.ipc.netty.http.server.HttpServer;
 @EnableReactiveMongoRepositories(basePackages = "com.objective.evolve")
 public class HttpServerConfig {
 
+    private static final String HOST = "localhost";
+    private static final int PORT = 8070;
+
     @Autowired
     private Environment environment;
 
@@ -24,7 +27,7 @@ public class HttpServerConfig {
     public HttpServer httpServer(RouterFunction<?> routerFunction) {
         HttpHandler httpHandler = RouterFunctions.toHttpHandler(routerFunction);
         ReactorHttpHandlerAdapter adapter = new ReactorHttpHandlerAdapter(httpHandler);
-        HttpServer server = HttpServer.create();
+        HttpServer server = HttpServer.create(HOST, PORT);
         server.newHandler(adapter);
         return server;
     }
