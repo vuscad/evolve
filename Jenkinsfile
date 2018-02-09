@@ -5,7 +5,7 @@ node("master") {
     }
 
     stage('Docker-compose up') {
-        sh 'docker-compose up'
+        sh 'docker-compose up --build -d'
     }
 
     stage('Smoke tests') {
