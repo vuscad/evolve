@@ -31,20 +31,20 @@ public class Routes {
     @Bean
     public RouterFunction<ServerResponse> routingFunction() {
         return nest(accept(MediaType.APPLICATION_JSON),
-                 route(GET("/area/{id}"), domainHandler::findById)
-                .andRoute(GET("/areas"), domainHandler::findAll)
-                .andRoute(PUT("/area/{id}"), domainHandler::update)
-                .andRoute(DELETE("/area/{id}"), domainHandler::delete)
-                .andRoute(POST("/area"), domainHandler::save)
-                .andRoute(GET("/path/{id}"), pathHandler::findById)
-                .andRoute(GET("/paths"), pathHandler::findAll)
-                .andRoute(PUT("/path/{id}"), pathHandler::update)
-                .andRoute(DELETE("/path/{id}"), pathHandler::delete)
-                .andRoute(POST("/path"), pathHandler::save)
-                .andRoute(GET("/task/{id}"), taskHandler::findById)
-                .andRoute(GET("/tasks"), taskHandler::findAll)
-                .andRoute(PUT("/task/{id}"), taskHandler::update)
-                .andRoute(DELETE("/task/{id}"), taskHandler::delete)
-                .andRoute(POST("/task"), taskHandler::save));
+             route(GET("/area/{id}"), domainHandler::findById)
+            .andRoute(GET("/areas"), domainHandler::findAll)
+            .andRoute(PUT("/area/{id}"), domainHandler::update)
+            .andRoute(DELETE("/area/{id}"), domainHandler::delete)
+            .andRoute(POST("/area"), domainHandler::save)
+            .andRoute(GET("/path/{id}"), pathHandler::findById)
+            .andRoute(GET("/paths"), pathHandler::findAll)
+            .andRoute(PUT("/path/{id}"), pathHandler::update)
+            .andRoute(DELETE("/path/{id}"), pathHandler::delete)
+            .andRoute(POST("/path"), pathHandler::save)
+            .andRoute(GET("/task/{id}"), taskHandler::findById)
+            .andRoute(GET("/tasks"), taskHandler::findAll)
+            .andRoute(PUT("/task/{id}"), taskHandler::update)
+            .andRoute(DELETE("/task/{id}"), taskHandler::delete)
+            .andRoute(POST("/task"), taskHandler::save));
     }
 }
