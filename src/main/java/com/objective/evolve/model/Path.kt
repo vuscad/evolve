@@ -8,6 +8,6 @@ import javax.validation.constraints.NotNull
 
 @Document(collection = "path")
 @TypeAlias("path")
-data class Path constructor(@Id var id: String?, @NotNull var name: String?, @DBRef var Domain: List<Domain>?) {
+data class Path constructor(@Id var id: String?, var name: String?, @DBRef var Domain: List<Domain>?) {
     private constructor() : this(null, null, null)
 }
