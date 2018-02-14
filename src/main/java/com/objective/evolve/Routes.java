@@ -31,11 +31,11 @@ public class Routes {
     @Bean
     public RouterFunction<ServerResponse> routingFunction() {
         return nest(accept(MediaType.APPLICATION_JSON),
-             route(GET("/area/{id}"), domainHandler::findById)
-            .andRoute(GET("/areas"), domainHandler::findAll)
-            .andRoute(PUT("/area/{id}"), domainHandler::update)
-            .andRoute(DELETE("/area/{id}"), domainHandler::delete)
-            .andRoute(POST("/area"), domainHandler::save)
+             route(GET("/domain/{id}"), domainHandler::findById)
+            .andRoute(GET("/domains"), domainHandler::findAll)
+            .andRoute(PUT("/domain/{id}"), domainHandler::update)
+            .andRoute(DELETE("/domain/{id}"), domainHandler::delete)
+            .andRoute(POST("/domain"), domainHandler::save)
             .andRoute(GET("/path/{id}"), pathHandler::findById)
             .andRoute(GET("/paths"), pathHandler::findAll)
             .andRoute(PUT("/path/{id}"), pathHandler::update)
