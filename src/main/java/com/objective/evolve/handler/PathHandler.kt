@@ -13,8 +13,8 @@ class PathHandler @Autowired constructor(private var repository: PathRepository)
 
     fun findAll(request: ServerRequest) : Mono<ServerResponse> {
         return ServerResponse
-                .ok()
-                .body(repository.findAll(), Path::class.java)
+            .ok()
+            .body(repository.findAll(), Path::class.java)
     }
 
     fun findById(request: ServerRequest): Mono<ServerResponse> {

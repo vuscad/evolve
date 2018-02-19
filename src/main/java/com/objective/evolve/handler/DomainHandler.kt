@@ -13,8 +13,8 @@ class DomainHandler @Autowired constructor(private var repository: DomainReposit
 
     fun findAll(request: ServerRequest) : Mono<ServerResponse> {
         return ServerResponse
-                .ok()
-                .body(repository.findAll(), Domain::class.java)
+            .ok()
+            .body(repository.findAll(), Domain::class.java)
     }
 
     fun findById(request: ServerRequest): Mono<ServerResponse> {

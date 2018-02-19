@@ -46,18 +46,18 @@ public class DomainHandler {
     @Test
     public void getAllDomains() {
         testClient.get()
-                .uri("/domains")
-                .exchange()
-                .expectStatus().isOk()
-                .expectBodyList(Domain.class).hasSize(1);
+            .uri("/domains")
+            .exchange()
+            .expectStatus().isOk()
+            .expectBodyList(Domain.class).hasSize(1);
     }
 
     @Test
     public void getDomainById() {
         testClient.get()
-                .uri("/domain/" + DOMAIN_ID)
-                .exchange()
-                .expectStatus().isOk()
-                .expectBodyList(Domain.class).hasSize(1);
+            .uri("/domain/" + DOMAIN_ID)
+            .exchange()
+            .expectStatus().isOk()
+            .expectBodyList(Domain.class).hasSize(1);
     }
 }

@@ -11,9 +11,9 @@ import org.springframework.web.reactive.function.server.router
 
 @Configuration
 open class Routes @Autowired constructor(
-        private var domainHandler: DomainHandler,
-        private var taskHandler: TaskHandler,
-        private var pathHandler: PathHandler) {
+    private var domainHandler: DomainHandler,
+    private var taskHandler: TaskHandler,
+    private var pathHandler: PathHandler) {
 
     @Bean open fun routingFunction() = router {
 

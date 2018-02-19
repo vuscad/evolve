@@ -30,7 +30,6 @@ class TaskHandler @Autowired constructor(private var repository: TaskRepository)
     }
 
     fun update(serverRequest: ServerRequest): Mono<ServerResponse> {
-
         return repository.findById(serverRequest.pathVariable("id"))
             .flatMap { _ ->
                 ServerResponse
