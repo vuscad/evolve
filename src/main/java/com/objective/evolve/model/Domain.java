@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Document(collection = "area")
-@TypeAlias("area")
+@Document(collection = "domain")
+@TypeAlias("domain")
 public class Domain implements Serializable {
 
     private static final long serialVersionUID = 8860980640517255440L;
