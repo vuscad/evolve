@@ -21,6 +21,7 @@ public class Path implements Serializable {
     private String id;
     @NotNull
     private String name;
+    @DBRef
     private List<Domain> domains = new ArrayList<>();
 
     protected Path() {
