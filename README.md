@@ -1,5 +1,5 @@
 # Description
-This project is a personal objective from my work and it’s part of a bigger application. The UI for this application can be found at “https://github.com/vuscad/evolve-ui”. This module was called “Training paths” and it should make it possible to create, edit and delete career paths, which will be assign to people later in other modules.
+This project is a personal objective from my work and it’s part of a bigger application. The UI for this application can be found at “ https://github.com/vuscad/evolve-ui ”. This module was called “Training paths” and it should make it possible to create, edit and delete career paths, which will be assign to people later in other modules.
 
 # Requirements
 The requirements for the assignment were:
