@@ -1,5 +1,10 @@
 node("master") {
-    dir('/Users/Shared/Jenkins/Home/workspace/evolve@script') {
+
+        stage('Checkout project') {
+         sh 'cp -rf Users/Shared/Jenkins/Home/workspace/evolve@script/* Users/Shared/Jenkins/Home/workspace/evolve@tmp'
+         sh 'cp -rf Users/Shared/Jenkins/Home/workspace/evolve@script/* Users/Shared/Jenkins/Home/workspace/evolve'
+        }
+
         stage('Build Project') {
             sh './gradlew clean build'
         }
@@ -15,5 +20,4 @@ node("master") {
         stage('Docker-compose down') {
             sh 'docker-compose down'
         }
-    }
 }
