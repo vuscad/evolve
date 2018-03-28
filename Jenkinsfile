@@ -2,7 +2,7 @@ node("master") {
     stage('Build Project') {
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         echo "Running under dir: "
-        pwd
+        sh 'pwd'
         echo "-----------------"
         sh 'gradlew clean build'
     }
