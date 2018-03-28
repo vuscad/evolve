@@ -1,6 +1,7 @@
 node("master") {
     stage('Build Project') {
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        echo "Workspace: ${env.WORKSPACE}"
         echo "Running under dir: "
         sh 'pwd'
         echo "-----------------"
