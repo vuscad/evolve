@@ -1,6 +1,7 @@
 node("master") {
     stage('Git checkout') {
         sh 'git clone https://github.com/vuscad/evolve.git'
+        sh 'cd evolve'
         sh 'git checkout kotlin'
     }
 
