@@ -2,10 +2,11 @@ node("master") {
     stage('Build Project') {
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         echo "Workspace: ${env.WORKSPACE}"
+        sh 'cd /Users/Shared/Jenkins/Home/workspace/evolve@script'
         echo "Running under dir: "
         sh 'pwd'
         echo "-----------------"
-        sh 'gradlew clean build'
+        sh './gradlew clean build'
     }
 
     stage('Docker-compose up') {
