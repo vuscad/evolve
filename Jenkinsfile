@@ -6,7 +6,7 @@ node("master") {
         }
 
         stage('Build Project') {
-            sh './gradlew clean build'
+            sh 'gradlew clean build'
         }
 
         stage('Docker-compose up') {
