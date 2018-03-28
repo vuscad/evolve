@@ -1,11 +1,10 @@
 node("master") {
+    stage('Git checkout') {
+        sh 'git clone https://github.com/vuscad/evolve.git'
+        sh 'git checkout kotlin'
+    }
+
     stage('Build Project') {
-        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        echo "Workspace: ${env.WORKSPACE}"
-        sh 'cp -vrf /Users/Shared/Jenkins/Home/workspace/evolve@script/* /Users/Shared/Jenkins/Home/workspace/evolve'
-        echo "Running under dir: "
-        sh 'pwd'
-        echo "-----------------"
         sh './gradlew clean build'
     }
 
